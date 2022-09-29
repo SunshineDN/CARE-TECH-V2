@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    min-width: 100vw;
+    background-color: #FA990A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.titulo {
+    font-size: 50px;
+    color: #FEFCFB;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_login,
+.input_senha {
+    margin: 10px;
+    width: 357px;
+    height: 55px;
+    border-radius: 30px;
+    border: none;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+.conteiner_input div {
+    display: flex;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+}
+
+.conteiner_input div input {
+    margin-right: 5px;
+}
+
+.conteiner_input div label {
+    display: flex;
+    align-items: center;
+}
+
+.conteiner_input div a {
+    text-decoration: underline;
+    color: white;
+}
+
+.img_rede {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px 15px;
+    margin-top: 30px;
+}
+
+.img_rede img {
+    background-color: #FA990A;
+}
+
+.button_login {
+    background-color: #0092DD;
+    color: #FEFCFB;
+    margin: 15px;
+    height: 55px;
+    width: 334px;
+    border-radius: 200px;
+    font-size: 24px;
+    border: none;
+}

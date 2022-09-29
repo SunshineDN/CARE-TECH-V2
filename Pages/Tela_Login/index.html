@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <script src="scripts/Login.js" defer></script>
+
+</head>
+<body>
+    <h1 class="titulo">Faça Seu <br /> Login </h1>
+    <div class="conteiner_input">
+        <div class="input">
+            <input class="input_login emailPassLogin" placeholder="Email" type="Email">
+            <input class="input_senha emailPassLogin" placeholder="Senha" type="password" name="Senha" >
+        </div>
+            
+        <div>
+            <label for="remember"><input type="checkbox" name="remember" id="remember">Lembrar senha</label>
+            <a href="#">Esqueceu Sua Senha</a>
+        </div>
+    </div>
+    <div class="img_rede">
+        <a class="img_Facebook" href="#"><img src="images/icons8-facebook-novo.svg" alt="img_Facebook"></a>
+        <a class="img_twitter" href="#"><img src="images/icons8-twitter.svg" alt="img_twitter"></a>
+        <a class="img_Google" href="#"><img src="images/icons8-google.svg" alt="img_Google"></a>
+    </div>
+
+    <button class="button_login" type="submit" onclick="Logar()">Login</button>
+</body>
+</html>
