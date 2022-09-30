@@ -1,3 +1,11 @@
 {
-  "contas": []
+  "contas": [
+    {
+      "id": 1,
+      "email": "douglas@gmail.com",
+      "name": "Douglas",
+      "birthDate": "2003-03-11",
+      "password": "123"
+    }
+  ]
 }

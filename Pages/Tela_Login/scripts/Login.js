@@ -13,6 +13,20 @@ const emailLogin = document.querySelector(".input_login");
 const passLogin = document.querySelector(".input_senha");
 const check = document.querySelector("#remember");
 
+const SetLogin = () => {
+    let localLogin = JSON.parse(localStorage.getItem("login"));
+
+    if (localLogin === null) {
+        return;
+    } else {
+        emailLogin.value = localLogin[0] ?? "";
+        passLogin.value = localLogin[1] ?? "";
+        check.checked = localLogin[2] ?? "";
+    }
+}
+
+SetLogin();
+
 const VerificarLogin = async (emailVerif) => {
     const data = await fetch(api + "/contas")
         .then(response => response.json());
@@ -39,6 +53,7 @@ const VerificarLogin = async (emailVerif) => {
 }
 
 const Logar = async () => {
+
     if (emailLogin.value == "" || passLogin.value == "") {
         alert("Algum dos dados do LOGIN estão vazios, verifique!");
         return
@@ -58,9 +73,13 @@ const Logar = async () => {
         emailLogin.value = "";
         return;
     } else {
+
+        if (check.checked) {
+            localStorage.setItem("login", JSON.stringify([emailLogin.value, passLogin.value, check.checked]))
+        } else localStorage.clear();
+
         alert("Usuário LOGADO com sucesso!");
-        emailLogin.value = "";
-        passLogin.value = "";
+        window.location.href = "/Pages/Tela_Principal/index.html";
         return;
     }
 }

@@ -15,9 +15,30 @@ const dataNascimentoCadastro = document.querySelector(".input_data_nascimento");
 const senhaCadastro = document.querySelector(".input_senha");
 const confirmSenha = document.querySelector(".input_confirmar_senha");
 
+
+
+
+const VerificarEmail = async (emailVerif) => {
+    const data = await fetch(api + "/contas")
+        .then(res => res.json());
+    let verify = false;
+    for (let contas of data) {
+        const { email } = contas;
+        if (emailVerif === email) {
+            verify = true;
+            break;
+        }
+    }
+    return verify;
+}
+
 const Cadastrar = async () => {
+    console.log(emailCadastro.value)
     if (emailCadastro.value == "" || senhaCadastro.value == "" || nomeCadastro.value == "" || dataNascimentoCadastro.value == "" || confirmSenha.value == "") {
         alert("Algum dos dados em CADASTRO estão vazios!");
+        return
+    } else if (await VerificarEmail(emailCadastro.value) != false) {
+        alert("Email já cadastrado!");
         return
     } else if (senhaCadastro.value == emailCadastro.value || senhaCadastro.value == nomeCadastro.value) {
         alert("A senha não pode ser idêntica ao email ou nome utilizado!");
@@ -39,9 +60,9 @@ const Cadastrar = async () => {
         "name": nomeCadastro.value,
         "birthDate": dataNascimentoCadastro.value,
         "password": senhaCadastro.value,
-        "logged": false,
-        "remember": false
     }
+
+    alert("Cadastrado com sucesso! Você será redirecionado à página inicial.");
 
     await fetch(api + "/contas", {
         method: "POST",
@@ -51,21 +72,14 @@ const Cadastrar = async () => {
         },
     });
 
-    confirm("Cadastrado com sucesso!");
-    window.history.back();
-
-    emailCadastro.value = "";
-    nomeCadastro.value = "";
-    dataNascimentoCadastro.value = "";
-    senhaCadastro.value = "";
-    confirmSenha.value = "";
+    window.location.href = "/Tela_Inicial/index.html";
 }
 
 var inputsCadastro = document.querySelectorAll('.emailPassCadastro');
 for (let element of inputsCadastro) {
     element.addEventListener("keypress", e => {
         if (e.key === "Enter") {
-            cadastrar();
+            Cadastrar();
         }
     })
 }

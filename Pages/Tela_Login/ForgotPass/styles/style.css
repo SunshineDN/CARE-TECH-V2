@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    text-align: start;
+    margin-left: 25px;
+    margin-top: 35px;
+    background-color: #FA990A;
+}
+
+.container::after {
+    content: "";
+    min-width: 50vw;
+    height: 25vh;
+    position: absolute;
+    background-color: #d18108;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+p {
+    margin: 20px 0;
+}
+
+input {
+    font-size: 18px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+input::placeholder {
+    color: #9B9B9B;
+}
+
+button {
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 4px;
+}
