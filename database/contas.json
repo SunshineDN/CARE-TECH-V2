@@ -6,6 +6,13 @@
       "name": "Douglas",
       "birthDate": "2003-03-11",
       "password": "123"
+    },
+    {
+      "id": 2,
+      "email": "paulo@gmail.com",
+      "name": "Paulo",
+      "birthDate": "1111-11-11",
+      "password": "123"
     }
   ]
 }
