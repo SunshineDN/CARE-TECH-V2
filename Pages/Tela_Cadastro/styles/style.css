@@ -15,6 +15,13 @@ body{
     align-items: center; 
     font-family: 'Open Sans', sans-serif;
 }
+
+.arrow {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
 .titulo{
     font-size: 50px;
     color: #FEFCFB;

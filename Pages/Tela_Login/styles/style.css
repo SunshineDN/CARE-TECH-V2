@@ -16,6 +16,12 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.arrow {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
 .titulo {
     font-size: 50px;
     color: #FEFCFB;
@@ -87,4 +93,31 @@ body {
     border-radius: 200px;
     font-size: 24px;
     border: none;
+}
+
+#labelRemember {
+    position: relative;
+    cursor: pointer;
+}
+
+#labelRemember input {
+    position: absolute;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    background-color: #eee;
+    top: -5px;
+    left: -30px;
+    width: 25px;
+    height: 25px;
+}
+
+.checkmark:hover {
+    background-color: #ccc;
+}
+
+.checkmark ~ #remember:checked {
+    background-color: #0092DD;
 }
