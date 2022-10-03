@@ -12,6 +12,7 @@ const api = `http://localhost:${port}`;
 const emailLogin = document.querySelector(".input_login");
 const passLogin = document.querySelector(".input_senha");
 const check = document.querySelector("#remember");
+const loginBtn = document.querySelector(".button_login");
 
 const SetLogin = () => {
     let localLogin = JSON.parse(localStorage.getItem("login"));
@@ -81,6 +82,14 @@ const Logar = async () => {
         alert("Usuário LOGADO com sucesso!");
         window.location.href = "/Pages/Tela_Principal/index.html";
         return;
+    }
+}
+
+function Verif() {
+    if (emailLogin.value != "" || passLogin.value != "") {
+        loginBtn.disabled = false
+    } else {
+        loginBtn.disabled = true
     }
 }
 

@@ -22,13 +22,18 @@ body{
     left: 25px;
 }
 
+.arrow:hover {
+    animation: kick 1s ease-in-out infinite;
+}
+
 .titulo{
     font-size: 50px;
     color: #FEFCFB;
     text-align: center;
     margin-bottom: 50px;
 }
-.input * {
+
+.input input {
     height: 39px;
     width: 334px;
     margin: 30px;
@@ -37,8 +42,8 @@ body{
     align-items: center;
     border-radius: 100px;
     border: none;
-    padding-left: 10px;
     font-size: 24px;
+    padding: 25px 20px;
 }
 
 .input *::placeholder {
@@ -55,10 +60,33 @@ body{
     gap: 0px 15px;
     margin-top: 30px;
 }
+
+.img_rede a{
+    transition: all 0.25s;
+}
+
 .img_rede img{
     background-color: #FA990A;
 }
-.button_login{
+
+.img_rede a:hover {
+    transform: translateY(-5px);
+}
+
+.button_cadastro:disabled {
+    background-color: #dadada;
+    color: #000000;
+    margin: 30px;
+    height: 55px;
+    width: 334px;
+    border-radius: 200px;
+    font-size: 24px;
+    border: none;
+    cursor: not-allowed;
+    transition: all 0.25s;
+}
+
+.button_cadastro:enabled{
     background-color: #0092DD;
     color: #FEFCFB;
     margin: 30px;
@@ -67,6 +95,30 @@ body{
     border-radius: 200px;
     font-size: 24px;
     border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.button_cadastro:enabled:hover {
+    transform: scale(1.1);
+}
+
+.button_cadastro:enabled:active {
+    transform: scale(1);
+    opacity: 0.8;
 }
 
 
+@keyframes kick {
+    from {
+        transform: translateX(0);
+    } 
+
+    50% {
+        transform: translateX(-5px);
+    }
+    
+    to {
+        transform: translateX(0);
+    }
+}

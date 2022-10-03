@@ -12,9 +12,11 @@
     <div class="container">
         <h1>Esqueceu sua senha?</h1>
         <p>Digite seu email abaixo e enviaremos para você as instruções de recuperação por email!</p>
-        <form class="form">
+        <form class="form" action="https://api.staticforms.xyz/submit" method="post">
+            <input type="hidden" name="accessKey" value="6c04b069-d054-4cca-9093-3ca54228e050">
             <input type="email" name="email" id="email" placeholder="Digite seu email aqui">
-            <button type="button" onClick="Enviar()">Enviar</button>
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/Pages/Tela_Login/ForgotPass/Congrats/index.html">
+            <button type="submit" >Enviar</button>
         </form>
     </div>
 </body>

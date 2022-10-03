@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #FA990A;
+    display: flex;
+    flex-direction: column;
+    row-gap: 200px;
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logo {
+    width: 150px;
+    animation: rotate 3s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-360deg);
+    }
+}

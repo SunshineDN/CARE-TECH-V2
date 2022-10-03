@@ -22,6 +22,10 @@ body {
     left: 25px;
 }
 
+.arrow:hover {
+    animation: kick 1s ease-in-out infinite;
+}
+
 .titulo {
     font-size: 50px;
     color: #FEFCFB;
@@ -88,7 +92,20 @@ body {
     background-color: #FA990A;
 }
 
-.button_login {
+.button_login:disabled {
+    background-color: #dadada;
+    color: #000000;
+    margin: 15px;
+    height: 55px;
+    width: 334px;
+    border-radius: 200px;
+    font-size: 24px;
+    border: none;
+    cursor: not-allowed;
+    transition: all 0.25s;
+}
+
+.button_login:enabled {
     background-color: #0092DD;
     color: #FEFCFB;
     margin: 15px;
@@ -98,11 +115,16 @@ body {
     font-size: 24px;
     border: none;
     transition: all 0.25s;
+    cursor: pointer;
 }
 
-.button_login:hover {
+.button_login:enabled:hover {
     transform: scale(1.1);
-    opacity: 0.9;
+}
+
+.button_login:enabled:active {
+    transform: scale(1);
+    opacity: 0.8;
 }
 
 #labelRemember {
@@ -161,4 +183,18 @@ body {
 
 .icon:hover {
     transform: translateY(-5px);
+}
+
+@keyframes kick {
+    from {
+        transform: translateX(0);
+    } 
+
+    50% {
+        transform: translateX(-5px);
+    }
+    
+    to {
+        transform: translateX(0);
+    }
 }

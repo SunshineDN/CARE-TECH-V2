@@ -17,6 +17,6 @@ const VerificarEmail = async (emailVerif) => {
     return verify;
 }
 
-const Enviar = async () => {
-    window.location.href = "./Congrats/index.html"
-}
+// const Enviar = async () => {
+//     window.location.href = "./Congrats/index.html"
+// }

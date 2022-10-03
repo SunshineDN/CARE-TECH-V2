@@ -14,9 +14,13 @@ const emailCadastro = document.querySelector(".input_email");
 const dataNascimentoCadastro = document.querySelector(".input_data_nascimento");
 const senhaCadastro = document.querySelector(".input_senha");
 const confirmSenha = document.querySelector(".input_confirmar_senha");
+const cadastroBtn = document.querySelector(".button_cadastro");
 
-
-
+function Verif() {
+    if (emailCadastro.value !== "" && senhaCadastro.value !== "" && nomeCadastro.value !== "" && dataNascimentoCadastro.value !== "" && confirmSenha.value !== ""){
+        cadastroBtn.disabled = false
+    } else cadastroBtn.disabled = true
+}
 
 const VerificarEmail = async (emailVerif) => {
     const data = await fetch(api + "/contas")
@@ -33,7 +37,6 @@ const VerificarEmail = async (emailVerif) => {
 }
 
 const Cadastrar = async () => {
-    console.log(emailCadastro.value)
     if (emailCadastro.value == "" || senhaCadastro.value == "" || nomeCadastro.value == "" || dataNascimentoCadastro.value == "" || confirmSenha.value == "") {
         alert("Algum dos dados em CADASTRO estão vazios!");
         return

@@ -17,8 +17,8 @@
     <h1 class="titulo">Faça Seu<br />Login</h1>
     <div class="conteiner_input">
         <div class="input">
-            <input class="input_login emailPassLogin" placeholder="Email" type="Email">
-            <input class="input_senha emailPassLogin" placeholder="Senha" type="password" name="Senha" >
+            <input class="input_login emailPassLogin" placeholder="Email" type="Email" onkeyup="Verif()">
+            <input class="input_senha emailPassLogin" placeholder="Senha" type="password" name="Senha" onkeyup="Verif()">
         </div>
             
         <div>
@@ -35,6 +35,6 @@
         <a class="icon" href="#"><img src="images/icons8-google.svg" alt="img_Google"></a>
     </div>
 
-    <button class="button_login" type="submit" onclick="Logar()">Login</button>
+    <button class="button_login" type="submit" onclick="Logar()" disabled>Login</button>
 </body>
 </html>
